@@ -36,3 +36,4 @@ export class AuthController {
     return this.authservice.updateTokenDevice(data.email, data.tokenDevice);
   }
 }
+
