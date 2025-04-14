@@ -12,6 +12,7 @@ async function bootstrap() {
   app.enableCors({
     origin: ['https://venta-front.vercel.app'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: '*',
     credentials: true,
   });
   
