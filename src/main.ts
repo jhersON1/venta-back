@@ -9,7 +9,12 @@ async function bootstrap() {
   app.use(json({ limit: '50mb' }));
   app.use(urlencoded({ limit: '50mb', extended: true }));
 
-  app.enableCors();
+  app.enableCors({
+    origin: ['https://venta-front.vercel.app'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    credentials: true,
+  });
+  
   const config = new DocumentBuilder()
     .setTitle('Endpoints Backend')
     .setDescription('Rutas y APIS del backend')
